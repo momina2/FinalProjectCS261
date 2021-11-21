@@ -1,0 +1,14 @@
+C:\Users\momina\source\repos\MainForm\MainForm\bin\Debug\MainForm.exe.config
+C:\Users\momina\source\repos\MainForm\MainForm\bin\Debug\MainForm.exe
+C:\Users\momina\source\repos\MainForm\MainForm\bin\Debug\MainForm.pdb
+C:\Users\momina\source\repos\MainForm\MainForm\obj\Debug\MainForm.csproj.AssemblyReference.cache
+C:\Users\momina\source\repos\MainForm\MainForm\obj\Debug\MainForm.csproj.SuggestedBindingRedirects.cache
+C:\Users\momina\source\repos\MainForm\MainForm\obj\Debug\MainForm.Form1.resources
+C:\Users\momina\source\repos\MainForm\MainForm\obj\Debug\MainForm.Properties.Resources.resources
+C:\Users\momina\source\repos\MainForm\MainForm\obj\Debug\MainForm.csproj.GenerateResource.cache
+C:\Users\momina\source\repos\MainForm\MainForm\obj\Debug\MainForm.csproj.CoreCompileInputs.cache
+C:\Users\momina\source\repos\MainForm\MainForm\obj\Debug\MainForm.exe
+C:\Users\momina\source\repos\MainForm\MainForm\obj\Debug\MainForm.pdb
+C:\Users\momina\source\repos\MainForm\MainForm\obj\Debug\MainForm.RegistrationForm.resources
+C:\Users\momina\source\repos\MainForm\MainForm\obj\Debug\MainForm.Items.resources
+C:\Users\momina\source\repos\MainForm\MainForm\obj\Debug\MainForm.CustomerView.resources
