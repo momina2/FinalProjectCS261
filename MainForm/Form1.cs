@@ -56,5 +56,10 @@ namespace MainForm
             Items items = new Items();
             items.ShowDialog(); 
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

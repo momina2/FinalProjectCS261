@@ -134,5 +134,10 @@ namespace MainForm
             fileNameTB.Text = openFileDialog1.FileName;
             BindData(fileNameTB.Text);
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
