@@ -59,7 +59,8 @@ namespace MainForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Form1 form1 = new Form1();
+            form1.ShowDialog();
         }
 
         private void label3_Click_1(object sender, EventArgs e)

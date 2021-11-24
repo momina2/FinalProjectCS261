@@ -136,9 +136,9 @@
             this.label7.Location = new System.Drawing.Point(171, 356);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 22);
+            this.label7.Size = new System.Drawing.Size(30, 22);
             this.label7.TabIndex = 28;
-            this.label7.Text = "label7";
+            this.label7.Text = "ID";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6

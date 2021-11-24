@@ -74,3 +74,4 @@ C:\Users\NR Solution\Desktop\FinalProjectCS261\MainForm\obj\Debug\MainForm.cspro
 C:\Users\NR Solution\Desktop\FinalProjectCS261\MainForm\obj\Debug\MainForm.csproj.CopyComplete
 C:\Users\NR Solution\Desktop\FinalProjectCS261\MainForm\obj\Debug\MainForm.exe
 C:\Users\NR Solution\Desktop\FinalProjectCS261\MainForm\obj\Debug\MainForm.pdb
+C:\Users\NR Solution\Desktop\FinalProjectCS261\MainForm\obj\Debug\MainForm.DataStats.resources
