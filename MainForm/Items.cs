@@ -92,52 +92,124 @@ namespace MainForm
             this.Close();
         }
 
-
-
-        private void BindData(string filePath)
+        public List<Products> LoadCSV(string csvFile)
         {
+            var query = from l in File.ReadAllLines(csvFile)
+                        let data = l.Split(',')
+                        select new Products
+                        {
+                            FoodName = data[0],
+                            ScientificName = data[1],
+                            Group = data[2],
+                            SubGroup = data[3],
+                            Rates =  data[4],
 
-            DataTable dt = new DataTable();
-            string[] lines = System.IO.File.ReadAllLines(filePath);
-            if (lines.Length > 0)
-            {
-                //first line to create header
-                string firstLine = lines[0];
-                string[] headerLabels = firstLine.Split(',');
-                foreach (string headerWord in headerLabels)
-                {
-                    dt.Columns.Add(new DataColumn(headerWord));
-                }
-                //For Data
-                for (int i = 1; i < lines.Length; i++)
-                {
-                    string[] dataWords = lines[i].Split(',');
-                    DataRow dr = dt.NewRow();
-                    int columnIndex = 0;
-                    foreach (string headerWord in headerLabels)
-                    {
-                        dr[headerWord] = dataWords[columnIndex++];
-                    }
-                    dt.Rows.Add(dr);
-                }
-            }
-            if (dt.Rows.Count > 0)
-            {
-                dataGridView1.DataSource = dt;
-            }
+                        };
+
+            return query.ToList();
+
 
         }
+
+
 
         private void button5_Click_1(object sender, EventArgs e)
         {
             openFileDialog1.ShowDialog();
             fileNameTB.Text = openFileDialog1.FileName;
-            BindData(fileNameTB.Text);
+            //ndData(fileNameTB.Text);
+            dataGridView1.DataSource = LoadCSV(fileNameTB.Text);
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void Items_Load(object sender, EventArgs e)
+        {
+            dataGridView1.ForeColor = Color.Black;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int rowIndex = dataGridView1.CurrentCell.RowIndex;
+            dataGridView1.Rows.RemoveAt(rowIndex);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddToCSV(FoodtextBox.Text, ScientifictextBox.Text, GrouptextBox.Text, SubGrouptextBox.Text, RatestextBox.Text, fileNameTB.Text);
+          
+        }
+
+        public void AddToCSV(string food, string sname, string group, string subgroup, string rate, string filepath)
+        {
+            try
+            {
+                using (System.IO.StreamWriter file = new System.IO.StreamWriter(@filepath, true))
+                {
+                    file.WriteLine(food + "," + sname + "," + group + "," + subgroup + "," + rate);
+
+                }
+                MessageBox.Show("Added to CSV Successfully", "Success");
+
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("this program did an OOPSIE", ex);
+            }
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+
+
+    public class Products
+    {
+        public string FoodName { get; set; }
+        public string ScientificName { get; set; }
+        public string Group { get; set; }
+        public string SubGroup { get; set; }
+        public string Rates { get; set; }
     }
 }
